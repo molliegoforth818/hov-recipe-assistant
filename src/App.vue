@@ -1,28 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <v-app>
+    <v-main class="container mt-10">
+      <h1 class="text-center pink--text mb-4">Recipe Assistant</h1>
+      <v-container>
+        <v-row class="justify-center mt-10">
+          <v-btn color="pink lighten-3" @click="getRandomRecipes">Find recipes</v-btn>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import { mapActions } from "vuex";
 export default {
-  name: "App",
+
   components: {
-    HelloWorld,
+
   },
+  methods: {
+    ...mapActions(["getRandomRecipes"])
+  }
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
