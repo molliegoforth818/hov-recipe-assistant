@@ -1,6 +1,6 @@
 <template>
   <v-card height="100%">
-    <v-card-title class="accent--text">Meal Type</v-card-title>
+    <v-card-title class="green--text">Meal Type</v-card-title>
     <v-card-subtitle class="mt-6">
       <em>Filter results meal type</em>
     </v-card-subtitle>

@@ -1,6 +1,6 @@
 <template>
   <v-card height="100%">
-    <v-card-title class="accent--text">Key Ingredients</v-card-title>
+    <v-card-title class="green--text">Key Ingredients</v-card-title>
     <v-card-text>
       <div class="pb-6" v-if="ingredients.length">
         <v-chip-group column>
@@ -9,7 +9,8 @@
             :key="ing"
             close
             @click:close="removeIngredient(ing)"
-            color="primary"
+            color="green"
+            dark
             >{{ ing }}</v-chip
           >
         </v-chip-group>

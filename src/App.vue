@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main class="container mt-10">
-      <h1 class="text-center pink--text mb-4">Recipe Assistant</h1>
+          <v-app-bar app color="green darken-3" dark> Recipe Assistant </v-app-bar>
       <v-container>
         <v-row>
           <v-col>
@@ -15,8 +15,9 @@
           </v-col>
         </v-row>
         <v-row class="justify-center mt-10">
-          <v-btn color="pink lighten-3" @click="getRandomRecipes"
-            >Find recipes</v-btn>
+          <v-btn color="green darken-3"  dark @click="getRandomRecipes"
+            >Find recipes</v-btn
+          >
         </v-row>
         <recipe-results />
       </v-container>
@@ -26,16 +27,16 @@
 
 <script>
 import { mapActions } from "vuex";
-import KeyIngredients from './components/KeyIngredients.vue';
+import KeyIngredients from "./components/KeyIngredients.vue";
 import RecipeResults from "./components/RecipeResults.vue";
 import DietSelect from "./components/DietSelect.vue";
-import MealTypeSelect from './components/MealTypeSelect.vue';
+import MealTypeSelect from "./components/MealTypeSelect.vue";
 export default {
   components: {
     RecipeResults,
     KeyIngredients,
     DietSelect,
-    MealTypeSelect
+    MealTypeSelect,
   },
   methods: {
     ...mapActions(["getRandomRecipes"]),
