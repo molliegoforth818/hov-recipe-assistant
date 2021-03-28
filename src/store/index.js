@@ -23,8 +23,19 @@ state.ingredients = [...state.ingredients, payload];
 state.ingredients = state.ingredients.filter(ingredients => {
   return ingredients !== payload;
 })
-    }
+    },
+  addDiet(state, payload) {
+    state.diets = [...state.diets, payload];
   },
+  removeDiet(state, payload) {
+    state.diets = state.diets.filter(d => {
+      return d !== payload;
+    });
+  },
+  setMealType(state, payload) {
+    state.mealType = payload;
+  },
+},
   actions: {
     async getRandomRecipes({ getters, commit }) {
       const res = await fetch(getters.recipeURL);

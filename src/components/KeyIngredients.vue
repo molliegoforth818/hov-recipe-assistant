@@ -1,6 +1,6 @@
 <template>
-  <v-card>
-    <v-card-title>Key Ingredients</v-card-title>
+  <v-card height="100%">
+    <v-card-title class="accent--text">Key Ingredients</v-card-title>
     <v-card-text>
       <div class="pb-6" v-if="ingredients.length">
         <v-chip-group column>
@@ -14,8 +14,16 @@
           >
         </v-chip-group>
       </div>
+      <v-card-subtitle v-else>
+        <em>No key ingredients</em>
+      </v-card-subtitle>
       <v-form @submit.prevent="submit">
-        <v-text-field label="Add an ingredient" v-model="ingredient" />
+        <v-text-field
+          filled
+          outlined
+          label="Add an ingredient"
+          v-model="ingredient"
+        />
       </v-form>
     </v-card-text>
   </v-card>
