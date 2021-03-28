@@ -15,6 +15,14 @@ export default new Vuex.Store({
   mutations: {
     setSearchResults(state, payload){
       state.searchResults = payload
+    },
+    addIngredient(state, payload){
+state.ingredients = [...state.ingredients, payload];
+    },
+    removeIngredient(state, payload) {
+state.ingredients = state.ingredients.filter(ingredients => {
+  return ingredients !== payload;
+})
     }
   },
   actions: {
