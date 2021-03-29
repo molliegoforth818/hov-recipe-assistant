@@ -5,4 +5,4 @@ Project Vault level 4
 
 
 ### Check it out!
-hov-recipe-assistant.firebaseapp.com
+https://hov-recipe-assistant.firebaseapp.com/
